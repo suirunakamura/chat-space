@@ -23,7 +23,8 @@
 |Columns|Type|Options|
 |users_id|references|index: true, null: false, foregin_key: true|
 |groups_id|references|index: true, null: false, foreign_key: true|
-|image|integer|
+|image|string|
+|text|string|
 - belongs_to :user
 - belomgs_to :group
 
