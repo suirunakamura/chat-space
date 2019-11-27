@@ -4,11 +4,9 @@
 
 |Columns|Type|Options|
 |-------|----|-------|
-|name|string|index: true, null: false, foreign_key: true, unique: true|
-|Email|integer|null: false, unique: 
-true|
+|name|string|index: true, null: false, unique: true|
 - has_many :groups_users
-- has_many :groups, through:groups_users
+- has_many :groups, through: :groups_users
 - has_many :messages
 
 ## groupテーブル
@@ -16,14 +14,18 @@ true|
 |columns|type|Options|
 |-------|----|-------|
 |name|string|null: false|
-- has_many :groups_users
-- has_many :users, through:groups_users
+- has_many :groups_users　
+- has_many :users, through: :groups_users 
+- has_many :messages
 
 ## messagesテーブル
 
 |Columns|Type|Options|
-|name|string|null: false|
-- belongs_to :users
+|users_id|references|index: true, null: false, foregin_key: true|
+|groups_id|references|index: true, null: false, foreign_key: true|
+|image|integer|
+- belongs_to :user
+- belomgs_to :group
 
 
 
