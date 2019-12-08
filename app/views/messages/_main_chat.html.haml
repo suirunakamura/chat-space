@@ -1,0 +1,24 @@
+.main-chat
+  .main-chat__group
+    .main-chat__group__list
+      .main-chat__group__list--name test
+      .main-chat__group__list--member  Member : masa
+    .main-chat__group__edit
+      .main-chat__group__edit--box
+        = link_to 'Edit', "#" 
+  .main-chat__messageroom
+    .main-chat__messageroom__onebox
+      .main-chat__messageroom__onebox__userinfo
+        .main-chat__messageroom__onebox__userinfo--name  masa
+        .main-chat__messageroom__onebox__userinfo--time 2019/11/20(wed) 17:43:34
+        .main-chat__messageroom__onebox__text  おはようございます！
+  .main-chat__sendmessage
+    .main-chat__sendmessage__form
+      %form.form{:action => "#", :method => "post"}
+        %input.message{:name => "type a message", placeholder: "type a message", :type => "text", :value => ""}
+        -# %input.btn{:type => "submit", :value => "send"} 
+        %label.main-chat__sendmessage__form__name__img
+          = icon('fas', 'image')
+          %input.file{type: "file"}
+        %input.btn{:type => "submit", :value => "send"} 
+        
