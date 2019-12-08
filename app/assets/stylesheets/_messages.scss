@@ -174,8 +174,6 @@
         padding-left: 40px;
         padding-right: 40px;
         top: 100px;
-        // bottom: 90px;
-        // display: flex;
         flex-direction: column;
 
         &__onebox {
@@ -185,9 +183,6 @@
             margin-bottom: 46px;
             position: relative;
             display: flex;
-            // flex-direction: column;
-
-            // justify-content: space-around;
             padding-bottom: 40px;
 
 
@@ -195,10 +190,6 @@
               background-color: #fafafa;
               height: 32px;
               display: flex;
-            //   position: absolute;
-            //   top: 0px;
-            //   justify-content: flex-start;
-
 
               &--name {
                 color: #333333;
@@ -219,7 +210,6 @@
             &__text {
                 background-color: #fafafa;
                 height: 25px;
-                // margin-top: 79px;
                 color: black;
                 position: absolute;
                 top: 45px;
@@ -233,7 +223,6 @@
         height: 90px;
         width: calc(100vw - 300px);
         position: fixed;
-        // position: relative;
         bottom: 0px;
         right: 0px;
         z-index: 1;
@@ -245,7 +234,6 @@
             margin-left: 40px;
             margin-top: 20px;
             display: flex;
-            // position: relative;
 
             .form {
                 background-color: #ddd;
@@ -270,7 +258,6 @@
                     height: 50px;
                     width: 100px;
                     font-size: 18px;
-                    // margin-left: px;
                     line-height: 50px;
                     background-color: #38aef0;
                     color: white;
@@ -299,7 +286,6 @@
                     .file {
                         height: 100%;
                         width: 100%;
-                        // margin-right: 10px;
                     }
 
 
@@ -308,7 +294,6 @@
                         height: 100%;
                         width: 100%;
                         font-size: 24px;
-                        // margin-right: 10px;
                     }
                     
                     

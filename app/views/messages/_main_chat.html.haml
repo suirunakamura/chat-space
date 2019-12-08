@@ -16,7 +16,6 @@
     .main-chat__sendmessage__form
       %form.form{:action => "#", :method => "post"}
         %input.message{:name => "type a message", placeholder: "type a message", :type => "text", :value => ""}
-        -# %input.btn{:type => "submit", :value => "send"} 
         %label.main-chat__sendmessage__form__name__img
           = icon('fas', 'image')
           %input.file{type: "file"}
