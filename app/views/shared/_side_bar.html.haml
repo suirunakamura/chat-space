@@ -1,28 +1,17 @@
 .side-bar
-  .header
-    %h3.header__name
-      = current_user.name
-      ユーザーネーム
-    %ul.header__lists
-      %li.list
-        = link_to do
-          = icon('fas', 'pen-square', class: 'icon')
-      %li.list
-        = link_to edit_user_path(current_user) do
-          = icon('fas', 'cog', class: 'icon')
-  .groups
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
+  .side-bar__userlist
+    .side-bar__userlist--info
+      .side-bar__userlist--info--name masa
+      .side-bar__userlist--info--icons
+        = link_to '/groups/new', class: "icon_1" do
+          = icon('far', 'edit')
+        = link_to "/users/:id", class: "icon_2" do
+          = icon('fas', 'cog')
+  .side-bar__group
+    - current_user.groups.each do |group|
+      .side-bar__group__box
+        = link_to '#' do
+          .side-bar__group__box--name
+            =  group.name
+          .side-bar__group__box--messages
+            メッセージはまだありません。
