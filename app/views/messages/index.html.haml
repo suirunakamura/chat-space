@@ -1,3 +1,30 @@
 .wrapper
   = render "shared/side_bar"
-  = render "main_chat"
+  -# = render "messages/main-chat" 
+  .main-chat
+    .main-chat__group
+      .main-chat__group__list
+        .main-chat__group__list--name 
+          = @group.name
+        .main-chat__group__list--member
+          - @group.group_users.each do |group_user|
+            = group_user.user.name
+      .main-chat__group__edit
+        .main-chat__group__edit--box
+          = link_to 'Edit','/groups/:id/edit'
+    .main-chat__messageroom
+      = render @messages
+
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'   
+
+
+
+
+        
