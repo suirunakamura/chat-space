@@ -4,30 +4,19 @@
       .main-chat__group__list--name 
         = @group.name
       .main-chat__group__list--member
-        = @group.users
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     .main-chat__group__edit
       .main-chat__group__edit--box
-        = link_to '/groups/:id/edit', 'Edit'
+        = link_to 'Edit',edit_group_path(@group)
   .main-chat__messageroom
     = render @messages
-    -# .main-chat__messageroom__onebox
-    -#   .main-chat__messageroom__onebox__userinfo
-    -#     .main-chat__messageroom__onebox__userinfo--name
-    -#       = message.user.name
-    -#     .main-chat__messageroom__onebox__userinfo--time 2019/11/20(wed) 17:43:34
-    -#       = message.created_at.strftime("%Y/%m/%d %H:%M")
-    -#     .main-chat__messageroom__onebox__text
-    -#       - if message.content.present?
-    -#         %p.main-chat__messageroom__onebox__text--image
-    -#           = %message.content
-    -#       = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-  .main-chat__sendmessage
-    .main-chat__sendmessage__form
-      .main-chat__sendmessage__form--form
-          = form_for [@group, @message] do |f|
-             = f.text_field :cotent, class: 'form__message', placeholder: 'type a message'
-        %form.form{:action => "#", :method => "post"}
-          %label.main-chat__sendmessage__form__name__img
-            = icon('fas', 'image')
-            %input.file{type: "file"}
-           %input.btn{:type => "submit", :value => "send"} 
+
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+        = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'

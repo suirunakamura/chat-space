@@ -6,7 +6,7 @@
       .side-bar__userlist--info--icons
         = link_to '/groups/new', class: "icon_1" do
           = icon('far', 'edit')
-        = link_to "/users/1", class: "icon_2" do
+        = link_to edit_user_path(current_user), class: "icon_2" do
           = icon('fas', 'cog')
   .side-bar__group
     - current_user.groups.each do |group|
