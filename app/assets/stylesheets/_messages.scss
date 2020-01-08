@@ -185,6 +185,8 @@ $alert_orange: #F35500;
         padding-right: 40px;
         top: 100px;
         flex-direction: column;
+        overflow: scroll;
+        height: calc(100vh - 190px);
 
         &__onebox {
             background-color: #fafafa;
