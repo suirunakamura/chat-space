@@ -60,6 +60,10 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-sass'
 gem 'devise'
-gem'carrierwave'
+gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
