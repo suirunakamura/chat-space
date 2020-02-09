@@ -106,7 +106,7 @@ $('#new_message').on('submit', function(e){
       }
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
   //$(function(){});の閉じタグの直上（処理の最後）に以下のように追記
