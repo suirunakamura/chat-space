@@ -19,7 +19,6 @@ $(function(){
         `</div>` +
       `<div>`
     } else if (message.content) {
-      //同様に、data-idが反映されるようにしている
       var html = `<div class="main-chat__messageroom__onebox" data-message-id=` + message.id + `>` +
         `<div class="main-chat__messageroom__onebox__userinfo">` +
           `<div class="main-chat__messageroom__onebox__userinfo--name">` +
@@ -36,7 +35,6 @@ $(function(){
         `</div>` +
       `</div>`
     } else if (message.image) {
-      //同様に、data-idが反映できるようにしている
       var html = `<div class="main-chat__messageroom__onebox" data-message-id=` + message.id + `>` +
         `<div class="main-chat__messageroom__onebox__userinfo">` +
           `<div class="main-chat__messageroom__onebox__userinfo--name">` +
