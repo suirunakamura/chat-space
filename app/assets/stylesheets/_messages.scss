@@ -45,13 +45,14 @@ $alert_orange: #F35500;
            display: flex;
 
            &--name {
-               background-color: #253141;
-               height: 20px;
-               width: calc(280px - 60px);
-               justify-content: flex-start;
-               color: white;
+            background-color: #253141;
+            height: 20px;
+            width: calc(280px - 60px);
+            justify-content: flex-start;
+            padding-left: 20px;
+            color: white;
 
-           }
+            }
 
            &--icons {
             background-color:#253141;
