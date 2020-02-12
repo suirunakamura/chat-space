@@ -36,11 +36,12 @@ $alert_orange: #F35500;
           background-color: #253141;
            height: 20px;
            width: 280px;
+           padding-left: 30px;
            position: absolute;          
            top:  0;                     
            bottom:  0;                  
            left:  0;                    
-           right:  0;
+        //    right:  0;
            margin:  auto;
            display: flex;
 
@@ -49,7 +50,6 @@ $alert_orange: #F35500;
             height: 20px;
             width: calc(280px - 60px);
             justify-content: flex-start;
-            padding-left: 20px;
             color: white;
 
             }
@@ -163,8 +163,7 @@ $alert_orange: #F35500;
                 height: 40px;
                 width: 80px;
                 margin-top: 28px;
-                padding-right: 20px;
-                padding-left: 20px;
+                text-align: center;
                 line-height: 40px;
                 border: 1px solid #38aef0;
                 text-decoration: none;
