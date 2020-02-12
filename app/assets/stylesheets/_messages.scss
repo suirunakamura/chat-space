@@ -222,11 +222,17 @@ $alert_orange: #F35500;
 
             &__text {
                 background-color: #fafafa;
+                // width: 200px;
+                // height: 100px;
                 height: 25px;
                 color: black;
                 position: absolute;
                 top: 45px;
                 left: 0px;
+
+                .lower-message__image {
+                width: 200px;
+                height: 100px;
             }
         }
     }
@@ -450,4 +456,5 @@ $alert_orange: #F35500;
                 padding: 0 30px;
               }
             }
-          }
+        }
+}
