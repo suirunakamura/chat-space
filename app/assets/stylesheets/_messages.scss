@@ -36,7 +36,7 @@ $alert_orange: #F35500;
           background-color: #253141;
            height: 20px;
            width: 280px;
-           padding-left: 30px;
+        //    padding-left: 30px;
            position: absolute;          
            top:  0;                     
            bottom:  0;                  
@@ -50,6 +50,7 @@ $alert_orange: #F35500;
             height: 20px;
             width: calc(280px - 60px);
             justify-content: flex-start;
+            padding-left: 20px;
             color: white;
 
             }
@@ -87,7 +88,6 @@ $alert_orange: #F35500;
             background-color: #2f3e51;
             height: 100px;
             width:100%;
-            padding: 20px;
             display: flex;
             flex-direction: column;
         
@@ -193,14 +193,14 @@ $alert_orange: #F35500;
             width: 100%;
             margin-top: 35px;
             margin-bottom: 46px;
-            position: relative;
-            display: flex;
+            // position: relative;
+            // display: flex;
             padding-bottom: 40px;
 
 
             &__userinfo {
               background-color: #fafafa;
-              height: 32px;
+            //   height: 32px;
               display: flex;
 
               &--name {
@@ -221,16 +221,15 @@ $alert_orange: #F35500;
 
             &__text {
                 background-color: #fafafa;
-                height: 25px;
                 color: black;
-                position: absolute;
-                top: 45px;
-                left: 0px;
+                // position: absolute;
+                // top: 45px;
+                // left: 0px;
 
-                .lower-message__image {
-                    width: 200px;
-                    height: 100px;
-                }
+                // .lower-message__image {
+                //     width: 200px;
+                //     height: 300px;
+                // }
             }
         }
     }

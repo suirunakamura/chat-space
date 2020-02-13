@@ -1,5 +1,6 @@
 $(function(){
   var buildHTML = function(message) {
+    console.log(message)
     if (message.content && message.image) {
       //data-idが反映しているようにしている
       var html = `<div class="main-chat__messageroom__onebox" data-message-id=` + message.id + `>` +
@@ -8,7 +9,7 @@ $(function(){
             message.user_name +
           `</div>` +
           `<div class="main-chat__messageroom__onebox__userinfo--time">` +
-            message.create_at +
+            message.created_at +
           `</div>` +
         `</div>` +
         `<div class=main-chat__messageroom__onebox__text">` +
@@ -83,6 +84,7 @@ $('#new_message').on('submit', function(e){
   var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id = $('.main-chat__messageroom__onebox:last').data("message-id");
+    console.log(last_message_id)
     $.ajax({
       //ルーティングで設定した通り/groups/id番号/api/messagesとなるような文字列を書く
       url: "api/messages",
@@ -101,8 +103,8 @@ $('#new_message').on('submit', function(e){
           inserHTML += buildHTML(message)
         });
         //メッセージが入ったHTMLに、入れ物ごとに追加
-        $('.main-chat__messageromm').append(inserHTML);
-        $('.main-chat__messageroom').animate({ scrollTop: $('.main-chat__messageroom')[0].scrollHeigth});
+        $('.main-chat__messageroom').append(inserHTML);
+        $('.main-chat__messageroom').animate({ scrollTop: $('.main-chat__messageroom')[0].scrollHeight});
       }
     })
     .fail(function() {

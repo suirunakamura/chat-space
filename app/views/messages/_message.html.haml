@@ -4,8 +4,10 @@
       = message.user.name
     .main-chat__messageroom__onebox__userinfo--time
       = message.created_at.strftime("%Y/%m/%d %H:%M")
-    .main-chat__messageroom__onebox__text
-      - if message.content.present?
-        %p.main-chat__messageroom__onebox__text--image
-          =  message.content
-      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  .main-chat__messageroom__onebox__text
+    - if message.content.present?
+      =  message.content
+      %p.main-chat__messageroom__onebox__text--image
+
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+    
